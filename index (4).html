@@ -2,125 +2,66 @@
 <html lang="cs">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DiplomováDílna – Práce připravíme za tebe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diplomová Pomoc – Nezávazná poptávka</title>
 
-  <!-- Google Ads Tracking -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11499053873"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17049474539"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'AW-11499053873');
+    gtag('config', 'AW-17049474539');
   </script>
 
   <style>
     body {
-      font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f1f8e9;
       margin: 0;
-      background: #e3f2fd;
-      color: #1a237e;
     }
     .container {
-      max-width: 900px;
+      max-width: 800px;
       margin: 40px auto;
+      background: #e6f2e6;
       padding: 30px;
-      background: #ffffff;
-      border-radius: 12px;
+      border-radius: 10px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
-    h1 {
-      text-align: center;
-      color: #0d47a1;
-      margin-bottom: 10px;
-    }
-    p.lead {
-      font-size: 18px;
-      text-align: center;
-      margin-bottom: 30px;
-      color: #37474f;
-    }
-    ul {
-      color: #1565c0;
-      margin-bottom: 30px;
-      padding-left: 20px;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .form {
-      background: #e1f5fe;
-      padding: 20px;
-      border-radius: 10px;
+    h2 {
+      color: #2e7d32;
     }
     input, textarea {
       width: 100%;
-      padding: 12px;
+      padding: 10px;
       margin: 10px 0;
-      border: 1px solid #b3e5fc;
+      border: 1px solid #ccc;
       border-radius: 6px;
     }
     button {
-      background: #1976d2;
+      background: #388e3c;
       color: white;
+      padding: 10px 20px;
       border: none;
-      padding: 12px 24px;
       border-radius: 6px;
-      font-size: 16px;
       cursor: pointer;
-    }
-    button:disabled {
-      background: #90caf9;
     }
     #status {
       color: #2e7d32;
       margin-top: 10px;
-      font-weight: bold;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Profesionální pomoc se zpracováním závěrečných prací na míru</h1>
-
-    <p style="text-align: center; font-size: 16px; margin-top: 5px;">
-      🌐 Více informací o nás a našich službách najdeš na&nbsp;
-      <a href="https://www.diplomovadilna.cz/" target="_blank" style="color: #0d47a1; font-weight: bold; text-decoration: underline;">
-        hlavní stránce
-      </a>.
-    </p>
-
-    <p class="lead">
-      Stačí nám napsat pár řádků do formuláře – ozveme se ti během chvíle s přesnou cenou i návrhem postupu.
-      <br><strong>Diskrétně, rychle a bez závazků.</strong>
-    </p>
-
-    <ul>
-      <li>✍️ Napíšeme odborný text přesně podle zadání. Bez kompromisů, bez stresu.</li>
-      <li>🧠 Vytvoříme kompletní práci od úvodu po závěr – včetně teorie i praxe.</li>
-      <li>📚 Dodáme profesionálně zpracované podklady, které obstojí u vedoucího i komise.</li>
-      <li>📐 Přesně naformátujeme podle požadavků školy, ČSN ISO 690, šablon i poznámek.</li>
-      <li>📝 Opravíme a upravíme jakýkoli text podle připomínek vedoucího – rychle a kvalitně.</li>
-      <li>🚀 Odevzdání na první pokus? S námi ano. Ať jde o seminárku, bakalářku nebo diplomku.</li>
-    </ul>
-
-    <div class="form">
-      <h2>📩 Nezávazná poptávka</h2>
-      <input id="name" type="text" placeholder="Vaše jméno" required />
-      <input id="email" type="email" placeholder="Váš e-mail" required />
-      <textarea id="message" placeholder="S čím potřebujete poradit?" rows="5" required></textarea>
-      <button id="sendBtn" onclick="sendTelegram()">📤 Odeslat</button>
-      <p id="status"></p>
-    </div>
+    <h2>📩 Nezávazná poptávka</h2>
+    <p>Vyplňte formulář – ozveme se do 30 minut.</p>
+    <input id="name" type="text" placeholder="Vaše jméno" required />
+    <input id="email" type="email" placeholder="Váš e-mail" required />
+    <textarea id="message" placeholder="S čím potřebujete poradit? Typ práce, rozsah, termín" required></textarea>
+    <button onclick="sendTelegram()">📤 Odeslat</button>
+    <p id="status"></p>
   </div>
-
-  <!-- WhatsApp Button -->
-  <a href="https://wa.me/420608369656" target="_blank"
-     style="position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white;
-     padding: 12px 18px; border-radius: 30px; font-weight: bold; text-decoration: none;
-     box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index: 999;">
-    💬 Napište nám na WhatsApp
-  </a>
 
   <script>
     function sendTelegram() {
@@ -130,21 +71,17 @@
       const email = document.getElementById("email").value.trim();
       const msg = document.getElementById("message").value.trim();
       const status = document.getElementById("status");
-      const btn = document.getElementById("sendBtn");
+      const btn = document.querySelector("button");
 
       if (!name || !email || !msg) {
-        status.innerText = "❗ Vyplňte prosím všechna pole.";
+        status.innerText = "❗ Vyplňte všechna pole.";
         return;
       }
 
       btn.disabled = true;
       btn.innerText = "⏳ Odesílám...";
 
-      const text = `📥 *NOVÁ POPTÁVKA DiplomováDílna*
-
-👤 *Jméno:* ${name}
-📧 *Email:* ${email}
-📝 *Zpráva:* ${msg}`;
+      const text = `📥 *NOVÁ POPTÁVKA*\n\n👤 *Jméno:* ${name}\n📧 *Email:* ${email}\n📝 *Zpráva:* ${msg}`;
 
       fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
         method: "POST",
@@ -154,21 +91,26 @@
           text: text,
           parse_mode: "Markdown"
         })
-      }).then(response => {
+      })
+      .then(response => {
         if (response.ok) {
           gtag('event', 'conversion', {
-            'send_to': 'AW-11499053873/coXOCJG-mrwaELHGlusq',
-            'value': 1.0,
-            'currency': 'UAH'
+            send_to: 'AW-17049474539/XXXXXXXXXXX',
+            value: 1.0,
+            currency: 'CZK'
           });
-
-          window.location.href = "https://www.diplomovadilna.cz/thanks";
+          status.innerText = "✅ Zpráva byla úspěšně odeslána!";
+          btn.innerText = "✅ Odesláno";
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("message").value = "";
         } else {
           status.innerText = "❌ Chyba při odesílání zprávy.";
           btn.disabled = false;
           btn.innerText = "📤 Odeslat";
         }
-      }).catch(() => {
+      })
+      .catch(() => {
         status.innerText = "⚠️ Problém s připojením.";
         btn.disabled = false;
         btn.innerText = "📤 Odeslat";
